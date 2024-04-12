@@ -12,6 +12,7 @@ const generateTokenAndCookies = async (userId, res) => {
     httpOnly: true, //prevent XSS attacks cross site scripting
     maxAge: 1000 * 60 * 60 * 24 * 7, // one week
     sameSite: "strict", // CSRF attacks request
+    secure: process.env.NODE_ENV !== "developement"
   });
 };
 
