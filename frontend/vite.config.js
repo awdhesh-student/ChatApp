@@ -8,7 +8,7 @@ export default defineConfig({
     port: 3000,
     proxy: {
       "/api": {
-        target: "https://chatapp-a5v9.onrender.com/", // your backend server address
+        target: "http://localhost:8000", // your backend server address
       },
     },
   },
